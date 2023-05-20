@@ -1,9 +1,2 @@
 build/
-*.bak
-build/esp-idf/esp_app_format/libesp_app_format.a
-build/compile_commands.json
-build/CMakeFiles/git-data/head-ref
-build/build.ninja
-build/bootloader/.ninja_log
-build/.ninja_log
-build/CMakeFiles/git-data/head-ref
+ 

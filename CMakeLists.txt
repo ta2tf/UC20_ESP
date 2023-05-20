@@ -12,4 +12,6 @@ target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "main/client.crt" TEXT)
 target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "main/client.key" TEXT)
 target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "main/awsrootca.crt" TEXT)
 
-set(COMPONENT_EMBED_TXTFILES "../certgoogle/google.crt")
+target_add_binary_data(${CMAKE_PROJECT_NAME}.elf "main/certgoogle/google.crt" TEXT)
+
+

@@ -6,7 +6,7 @@
  */
 
 
-
+#include "httpsota.h"
 #include <stdio.h>
 #include <string.h>
 #include "esp_wifi.h"
@@ -20,7 +20,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "protocol_examples_common.h"
-#include "httpsota.h"
+
 
 
 #define TAG "OTA"
@@ -41,11 +41,15 @@ void run_ota(void *params)
     xSemaphoreTake(ota_semaphore, portMAX_DELAY);
     ESP_LOGI(TAG, "Invoking OTA");
 
-    ESP_ERROR_CHECK(nvs_flash_init());
-
+     ESP_ERROR_CHECK(nvs_flash_init());
+     example_disconnect();
     ESP_ERROR_CHECK(esp_netif_init());
-    ESP_ERROR_CHECK(esp_event_loop_create_default());
+ //   ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+
     ESP_ERROR_CHECK(example_connect());
+
+
 
     esp_http_client_config_t clientConfig = {
       .url = "https://drive.google.com/u/0/uc?id=19lcX5Bgy4qlicdO1WXenlflAlzlAHl0Z&export=download", // our ota location
@@ -67,7 +71,7 @@ void run_ota(void *params)
 
 void on_button_pushed(void *params)
 {
-  xSemaphoreGiveFromISR(ota_semaphore, pdFALSE);
+ // xSemaphoreGiveFromISR(ota_semaphore, pdFALSE);
 }
 
 void ota_app(void)

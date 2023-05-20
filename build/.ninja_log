@@ -1210,3 +1210,10 @@
 145	580	7062959507714937	C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/bootloader/bootloader.map	d34db3443122e553
 116	1244	7063231672538169	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	7a7913406f74b310
 1245	1524	7063231675758164	esp-idf/esp_app_format/libesp_app_format.a	87bfc1893ad644e1
+1526	13463	7063231794615556	esp-idf/esp_system/ld/sections.ld	1227732c07e94e72
+1526	13463	7063231794615556	C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/esp-idf/esp_system/ld/sections.ld	1227732c07e94e72
+13464	31379	7063231974047196	gatt_server_service_table_demo.elf	397695761635612c
+31381	32029	7063231980874817	.bin_timestamp	2b63f9695245d238
+31381	32029	7063231980874817	C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/.bin_timestamp	2b63f9695245d238
+32030	32213	0	esp-idf/esptool_py/CMakeFiles/app_check_size	54af7ee50ef99c05
+32030	32213	0	C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	54af7ee50ef99c05

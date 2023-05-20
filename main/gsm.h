@@ -14,15 +14,15 @@
 
 
 
-#define MODEM_RST             5
-#define MODEM_PWRKEY          4
-#define MODEM_POWER_ON       23
+#define MODEM_RST             32
+#define MODEM_PWRKEY         32
+#define MODEM_POWER_ON       32
 
-#define MODEM_TX             27
-#define MODEM_RX             26
+#define MODEM_TX             33
+#define MODEM_RX             35
 
-#define MODEM_DTR            32
-#define MODEM_RI             33
+#define MODEM_DTR            12
+#define MODEM_RI             37
 
 
 #define HI_LEVEL             1

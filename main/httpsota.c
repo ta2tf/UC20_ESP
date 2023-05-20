@@ -23,7 +23,7 @@
 
 
 
-#define TAG "OTA"
+#define TAG "O T A"
 SemaphoreHandle_t ota_semaphore;
 
 const int software_version = 1;

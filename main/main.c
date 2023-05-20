@@ -68,14 +68,14 @@ void app_main(void)
 
     LED_Init();
     BLE_Init();
-  //  GSM_Init();
+    GSM_Init();
 
   //  IP5306_test();
   //  bat_Init();
 
-     ota_app();
+  //   ota_app();
 
-    aws_main();
+   // aws_main();
 	
 	
     while (1)

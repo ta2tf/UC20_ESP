@@ -1,0 +1,119 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.1-3\workspace\UC20_ESP\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1-3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6700 bytes. 0x900 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/httpsota.c.obj
+C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/main/httpsota.c: In function 'run_ota':
+C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/main/httpsota.c:60:22: warning: passing argument 1 of 'esp_https_ota' from incompatible pointer type [-Wincompatible-pointer-types]
+   60 |     if(esp_https_ota(&clientConfig) == ESP_OK)
+      |                      ^~~~~~~~~~~~~
+      |                      |
+      |                      esp_http_client_config_t *
+In file included from C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/main/httpsota.c:16:
+C:/Espressif/frameworks/esp-idf-v5.0.1-3/components/esp_https_ota/include/esp_https_ota.h:97:55: note: expected 'const esp_https_ota_config_t *' but argument is of type 'esp_http_client_config_t *'
+   97 | esp_err_t esp_https_ota(const esp_https_ota_config_t *ota_config);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable gatt_server_service_table_demo.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.5.1
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/gatt_server_service_table_demo.bin
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.1-3\workspace\UC20_ESP\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.0.1-3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/partition_table/partition-table.bin C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build/gatt_server_service_table_demo.bin"
+gatt_server_service_table_demo.bin binary size 0x157ea0 bytes. Smallest app partition is 0x200000 bytes. 0xa8160 bytes (33%) free.
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.0.1-3\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.0.1-3 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.0.1-3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Espressif/frameworks/esp-idf-v5.0.1-3/workspace/UC20_ESP/build -P C:/Espressif/frameworks/esp-idf-v5.0.1-3/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM53 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_service_table_demo.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.5.1
+Serial port COM53
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 41.01MHz is quite different to normalized freq 40MHz. Unsupported crystal in use?
+Crystal is 40MHz
+MAC: 30:c6:f7:e7:4f:b8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 16MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00167fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+Compressed 26368 bytes to 16431...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076ae... (100 %)
+Wrote 26368 bytes (16431 compressed) at 0x00001000 in 0.8 seconds (effective 275.0 kbit/s)...
+Hash of data verified.
+Compressed 1408672 bytes to 878010...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001a44b... (3 %)
+Writing at 0x00028ad9... (5 %)
+Writing at 0x00035ad7... (7 %)
+Writing at 0x0003c1d2... (9 %)
+Writing at 0x00042226... (11 %)
+Writing at 0x0004d7c3... (12 %)
+Writing at 0x00054c7d... (14 %)
+Writing at 0x0005a94c... (16 %)
+Writing at 0x0006054f... (18 %)
+Writing at 0x00065f94... (20 %)
+Writing at 0x0006b8de... (22 %)
+Writing at 0x000712ee... (24 %)
+Writing at 0x00076cf9... (25 %)
+Writing at 0x0007da3f... (27 %)
+Writing at 0x0008378a... (29 %)
+Writing at 0x0008996a... (31 %)
+Writing at 0x0008f640... (33 %)
+Writing at 0x0009556e... (35 %)
+Writing at 0x0009b3c4... (37 %)
+Writing at 0x000a135a... (38 %)
+Writing at 0x000a7421... (40 %)
+Writing at 0x000ad5c8... (42 %)
+Writing at 0x000b3901... (44 %)
+Writing at 0x000b947e... (46 %)
+Writing at 0x000bfa28... (48 %)
+Writing at 0x000c5124... (50 %)
+Writing at 0x000cae32... (51 %)
+Writing at 0x000d1201... (53 %)
+Writing at 0x000d6ed5... (55 %)
+Writing at 0x000dc795... (57 %)
+Writing at 0x000e1996... (59 %)
+Writing at 0x000e6e98... (61 %)
+Writing at 0x000ec15b... (62 %)
+Writing at 0x000f1850... (64 %)
+Writing at 0x000f6fa3... (66 %)
+Writing at 0x000fc755... (68 %)
+Writing at 0x00102233... (70 %)
+Writing at 0x0010797c... (72 %)
+Writing at 0x0010d35f... (74 %)
+Writing at 0x00112b5d... (75 %)
+Writing at 0x00118290... (77 %)
+Writing at 0x0011dce4... (79 %)
+Writing at 0x0012375c... (81 %)
+Writing at 0x00129215... (83 %)
+Writing at 0x0012f77e... (85 %)
+Writing at 0x001378dc... (87 %)
+Writing at 0x0014002c... (88 %)
+Writing at 0x00146219... (90 %)
+Writing at 0x0014e451... (92 %)
+Writing at 0x001539ea... (94 %)
+Writing at 0x00159871... (96 %)
+Writing at 0x0015f437... (98 %)
+Writing at 0x00164890... (100 %)
+Wrote 1408672 bytes (878010 compressed) at 0x00010000 in 20.2 seconds (effective 558.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 141...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (141 compressed) at 0x00008000 in 0.1 seconds (effective 441.4 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.1 seconds (effective 642.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
